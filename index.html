@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Car Price Predictor</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="background-shape shape-one"></div>
+    <div class="background-shape shape-two"></div>
+
+    <main class="container">
+
+        <!-- Header -->
+        <section class="hero">
+            <div class="car-icon">🚗</div>
+
+            <p class="tag">SMART CAR ANALYTICS</p>
+
+            <h1>Car Price <span>Predictor</span></h1>
+
+            <p class="subtitle">
+                Enter your car details and get an estimated resale price.
+            </p>
+        </section>
+
+
+        <!-- Form Card -->
+        <section class="card">
+
+            <div class="card-header">
+                <div>
+                    <h2>Enter Car Details</h2>
+                    <p>Fill in the information below</p>
+                </div>
+
+                <div class="step">01 / 01</div>
+            </div>
+
+
+            <form id="carForm">
+
+                <div class="form-grid">
+
+                    <!-- Company -->
+                    <div class="form-group">
+                        <label for="company">
+                            <span class="label-icon">🏢</span>
+                            Company
+                        </label>
+
+                        <select id="company" required>
+                            <option value="">Select company</option>
+                        </select>
+                    </div>
+
+
+                    <!-- Model -->
+                    <div class="form-group">
+                        <label for="model">
+                            <span class="label-icon">🚘</span>
+                            Car Model
+                        </label>
+
+                        <select id="model" required disabled>
+                            <option value="">Select company first</option>
+                        </select>
+                    </div>
+
+
+                    <!-- Year -->
+                    <div class="form-group">
+                        <label for="year">
+                            <span class="label-icon">📅</span>
+                            Manufacturing Year
+                        </label>
+
+                        <select id="year" required>
+                            <option value="">Select year</option>
+                        </select>
+                    </div>
+
+
+                    <!-- Fuel -->
+                    <div class="form-group">
+                        <label for="fuel">
+                            <span class="label-icon">⛽</span>
+                            Fuel Type
+                        </label>
+
+                        <select id="fuel" required>
+                            <option value="">Select fuel type</option>
+                        </select>
+                    </div>
+
+
+                    <!-- KMs -->
+                    <div class="form-group full-width">
+                        <label for="kms">
+                            <span class="label-icon">🛣️</span>
+                            Kilometers Driven
+                        </label>
+
+                        <div class="input-wrapper">
+                            <input
+                                type="number"
+                                id="kms"
+                                placeholder="e.g. 45000"
+                                min="0"
+                                required
+                            >
+                            <span>KM</span>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- Selected details -->
+                <div class="summary" id="summary">
+                    <div class="summary-title">Selected Details</div>
+
+                    <div class="summary-items">
+                        <div>
+                            <small>Company</small>
+                            <strong id="summaryCompany">—</strong>
+                        </div>
+
+                        <div>
+                            <small>Model</small>
+                            <strong id="summaryModel">—</strong>
+                        </div>
+
+                        <div>
+                            <small>Year</small>
+                            <strong id="summaryYear">—</strong>
+                        </div>
+
+                        <div>
+                            <small>Fuel</small>
+                            <strong id="summaryFuel">—</strong>
+                        </div>
+
+                        <div>
+                            <small>KMs</small>
+                            <strong id="summaryKms">—</strong>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Prediction Button -->
+                <button type="submit" id="predictBtn">
+                    <span>Predict Car Price</span>
+                    <span class="arrow">→</span>
+                </button>
+
+            </form>
+
+
+            <!-- Result -->
+            <div id="result" class="result hidden">
+
+                <div class="result-icon" id="resultIcon">⚠️</div>
+
+                <div class="result-body" id="resultBody">
+                    <h3 id="resultTitle">Unable to predict</h3>
+
+                    <p id="resultText">
+                        Backend server is not connected.
+                        Please connect the Flask API to get the predicted price.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+            <span>Car Price Prediction System</span>
+            <span>•</span>
+            <span>Machine Learning Project</span>
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
